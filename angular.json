@@ -21,10 +21,12 @@
               "src/favicon.ico"
             ],
             "styles": [
+              "src/assets/less/app.less",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/assets/sass/paper-kit.scss",
               "src/assets/css/demo.css",
-              "src/assets/css/nucleo-icons.css"
+              "src/assets/css/nucleo-icons.css",
+              "src/assets/css/uicons-regular-rounded.css"
             ],
             "scripts": []
           },
@@ -33,7 +35,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
@@ -77,7 +78,8 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/assets/sass/paper-kit.scss",
               "src/assets/css/demo.css",
-              "src/assets/css/nucleo-icons.css"
+              "src/assets/css/nucleo-icons.css",
+              "src/assets/css/uicons-regular-rounded.css"
             ],
             "assets": [
               "src/assets",
@@ -125,7 +127,7 @@
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",
-      "styleext": "less"
+      "style": "less"
     },
     "@schematics/angular:directive": {
       "prefix": "app"
