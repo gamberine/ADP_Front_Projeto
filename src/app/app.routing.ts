@@ -7,7 +7,6 @@ import { homeLandingComponent } from './components/home-landing.component';
 import { FormCadastroComponent } from './components/form-login/form-cadastro/form-cadastro.component';
 import { AreaInternaComponent } from './pages/area-interna/area-interna.component';
 import { SignupComponent } from './pages/signup/signup.component';
-import { LandingComponent } from './pages/landing/landing.component';
 import { NucleoiconsComponent } from './components/nucleoicons/nucleoicons.component';
 
 const routes: Routes =[
@@ -15,7 +14,6 @@ const routes: Routes =[
   { path: 'home', component: homeLandingComponent },
     { path: 'area-interna',     component: AreaInternaComponent },
     { path: 'signup',           component: SignupComponent },
-    { path: 'landing',          component: LandingComponent },
   { path: 'nucleoicons', component: NucleoiconsComponent },
   { path: 'form-cadastro', component: FormCadastroComponent }
 ];
