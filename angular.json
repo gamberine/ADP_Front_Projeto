@@ -26,7 +26,8 @@
               "src/assets/sass/paper-kit.scss",
               "src/assets/css/demo.css",
               "src/assets/css/nucleo-icons.css",
-              "src/assets/css/uicons-regular-rounded.css"
+              "src/assets/css/uicons-regular-rounded.css",
+              "src/assets/css/uicons-brands.css"
             ],
             "scripts": []
           },
@@ -79,7 +80,8 @@
               "src/assets/sass/paper-kit.scss",
               "src/assets/css/demo.css",
               "src/assets/css/nucleo-icons.css",
-              "src/assets/css/uicons-regular-rounded.css"
+              "src/assets/css/uicons-regular-rounded.css",
+              "src/assets/css/uicons-brands.css"
             ],
             "assets": [
               "src/assets",
@@ -123,7 +125,6 @@
       }
     }
   },
-  "defaultProject": "pk2-angular",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",

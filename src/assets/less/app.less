@@ -15,7 +15,7 @@
 @vermelho            : #E39898 !important;
 @gradient_amarelo    : linear-gradient(90deg, rgba(204, 157, 102, 1) 0%, rgba(231, 176, 110, 1) 35%) !important;
 @gradient_marrom     : radial-gradient(circle, #3d2935 0%, #E8B48D 83%) !important;
-@gradient_marrom_top : linear-gradient(90deg, #3d2935 0%, #E8B48D 83%) !important;
+@gradient_marrom_top : linear-gradient(90deg,#3d2935 0%,#8e6a5e 83%)!important;
 @gradient_cinza      : linear-gradient(90deg, #D4D8D6 0%, #F1F1F1 83%) !important;
 @gradient_cinza_top  : linear-gradient(0deg, #D4D8D6 0%, #F1F1F1 83%) !important;
 
@@ -35,12 +35,17 @@ a {
     cursor: pointer !important;
 }
 
+app-form-login {
+    position: fixed;
+    right: 10%;
+}
+
 .container,
 .container-lg,
 .container-md,
 .container-sm,
 .container-xl {
-    max-width: 86% !important;
+    max-width: 80% !important;
 }
 
 :focus-visible {
@@ -52,12 +57,15 @@ button:focus {
     box-shadow: 1px 1px 1px 1px #3c3b3b52;
 }
 .navbar-transparent .logoLanding {
-    width: 14vw;
+    width: 12vw;
+    padding: 1rem 0;
 }
 
 .logoLanding {
-    width: 10vw;
+    width: 7vw;
+    padding: 1rem 0;
 }
+
 .navbar .navbar-nav .nav-item .nav-link {
     font-weight: 400 !important;
     color      : #fff !important;
