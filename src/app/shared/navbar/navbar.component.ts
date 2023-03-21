@@ -10,6 +10,9 @@ export class NavbarComponent implements OnInit {
     private toggleButton: any;
     private sidebarVisible: boolean;
 
+    public logoLanding = 'assets/img/logo.png';
+    public logoInterna = 'assets/img/logo-interna.png';
+
     constructor(public location: Location, private element : ElementRef) {
         this.sidebarVisible = false;
     }

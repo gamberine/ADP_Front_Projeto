@@ -1,10 +1,14 @@
 <nav class="navbar navbar-expand-lg fixed-top navbar-transparent" color-on-scroll="500">
     <div class="container">
         <div class="navbar-translate">
-            <a class="navbar-brand" href="/home-landing.component">
-                <img class="logoLanding" src="assets/img/logo.png" alt="">
+            <a class="navbar-brand" href="/home" *ngIf="isHome()">
+                <img class="logoLanding" [src]="logoLanding" />
             </a>
-            <button class="navbar-toggler navbar-burger" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" (click)="sidebarToggle()">
+            <a class="navbar-brand" href="/home" *ngIf="!isHome()">
+                <img class="logoInterna" [src]="logoInterna" />
+            </a>
+            <button class="navbar-toggler navbar-burger" type="button" data-toggle="collapse" data-target="#navbarToggler"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" (click)="sidebarToggle()">
                 <span class="navbar-toggler-bar"></span>
                 <span class="navbar-toggler-bar"></span>
                 <span class="navbar-toggler-bar"></span>
@@ -12,26 +16,48 @@
         </div>
         <div class="navbar-collapse" id="navbarToggler">
             <ul class="navbar-nav ml-auto">
-                
+
                 <li class="nav-item" *ngIf="!isDocumentation()">
                     <a href="/home" class="nav-link"><i class="fi fi-rr-house-laptop"></i> Home</a>
                 </li>
                 <li class="nav-item" *ngIf="isHome()">
-                    <a href="/home" class="nav-link"><i class="nc-icon nc-book-bookmark"></i>Como funciona</a>
+                    <a href="/home" class="nav-link"><i class="fi fi-rr-comments-question"></i>Como funciona</a>
                 </li>
                 <li class="nav-item" *ngIf="isHome()">
-                    <a href="/home" class="nav-link"><i class="nc-icon nc-book-bookmark"></i>Sobre</a>
+                    <a href="/home" class="nav-link"><i class="fi fi-rr-id-card-clip-alt"></i>Sobre</a>
                 </li>
                 <li class="nav-item" *ngIf="isHome()">
-                    <a href="/home" class="nav-link"><i class="nc-icon nc-book-bookmark"></i>Planos</a>
+                    <a href="/home" class="nav-link"><i class="fi fi-rr-layer-plus"></i>Planos</a>
                 </li>
                 <li class="nav-item" *ngIf="isHome()">
-                    <a href="/home" class="nav-link"><i class="nc-icon nc-book-bookmark"></i>Contato</a>
+                    <a href="#" class="nav-link"><i class="fi fi-rr-headset"></i>Contato</a>
+                    </li>
+                    <li class="nav-item" *ngIf="isHome()">
+                        <a [routerLink]="['/user-profile']" class="nav-link"><i class="fi fi-rr-arrow-up-right-from-square"></i>Área
+                            interna</a>
+                    </li>
+                    
+                    
+                    <!-- ------------- MENU TELAS INTERNAS -------------- -->
+                    
+                    <li class="nav-item" *ngIf="!isHome()">
+                        <a href="/home" class="nav-link"><i class="fi fi-rr-layer-plus"></i>GERENCIAR</a>
+                    </li>
+                    <li class="nav-item" *ngIf="!isHome()">
+                        <a href="/home" class="nav-link"><i class="fi fi-rr-comments-question"></i>AJUDA</a>
+                    </li>
+                    <li class="nav-item" *ngIf="!isHome()">
+                        <a href="#" class="nav-link"><i class="fi fi-rr-headset"></i>CONTATO</a>
                 </li>
                 <li class="nav-item" *ngIf="!isHome()">
-                    <a [routerLink]="['/home']" *ngIf="!isDocumentation()" class="nav-link"><i class="nc-icon nc-layout-11"></i>Components</a>
+                    <a [routerLink]="['/home']" class="nav-link"><i class="fi fi-rr-sign-out-alt"></i>SAIR</a>
+                    </li>
+                    <!-- --------teste -------- -->
+                    <!-- <li class="nav-item" *ngIf="!isHome()">
+                                                                                                <a [routerLink]="['/home']" *ngIf="!isDocumentation()" class="nav-link"><i
+                                                                                                        class="nc-icon nc-layout-11"></i>Components</a>
                     <a [routerLink]="['/home']" *ngIf="isDocumentation()" class="nav-link">Back to Kit</a>
-                </li>
+                </li> -->
             </ul>
         </div>
     </div>

@@ -11,6 +11,7 @@ import { filter, Subscription } from 'rxjs';
     styleUrls: ['../assets/less/app.less']
 })
 export class AppComponent implements OnInit {
+
     private _router: Subscription;
     @ViewChild(NavbarComponent) navbar: NavbarComponent;
 

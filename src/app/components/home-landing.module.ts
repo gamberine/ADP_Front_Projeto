@@ -14,6 +14,8 @@ import { homeLandingComponent } from './home-landing.component';
 import { NotificationComponent } from './notification/notification.component';
 import { NgbdModalComponent } from './modal/modal.component';
 import { NgbdModalContent } from './modal/modal.component';
+import { FormLoginComponent } from './form-login/form-login.component';
+import { FormCadastroComponent } from './form-login/form-cadastro/form-cadastro.component';
 
 @NgModule({
     imports: [
@@ -32,7 +34,9 @@ import { NgbdModalContent } from './modal/modal.component';
         NucleoiconsComponent,
         NotificationComponent,
         NgbdModalComponent,
-        NgbdModalContent
+        NgbdModalContent,
+        FormLoginComponent,
+        FormCadastroComponent
     ],
     entryComponents: [NgbdModalContent],
     exports: [homeLandingComponent]

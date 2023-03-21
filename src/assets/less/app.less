@@ -4,6 +4,7 @@
 @cinza               : #828282 !important;
 @cinza_bg            : #D4D8D6 !important;
 @cor_icones          : #C39984 !important;
+@corSeparador : #8282822e !important;
 @azul                : #88BCC2 !important;
 @azul_escuro         : #6D9994 !important;
 @verde               : #69B88A !important;
@@ -30,14 +31,47 @@ h4,
     margin: 0 !important;
 }
 
+a {
+    cursor: pointer !important;
+}
+
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl {
+    max-width: 86% !important;
+}
+
+:focus-visible {
+    outline: none !important;
+}
+
+button:focus {
+    outline   : none !important;
+    box-shadow: 1px 1px 1px 1px #3c3b3b52;
+}
 .navbar-transparent .logoLanding {
-    width: 15vw;
+    width: 14vw;
 }
 
 .logoLanding {
     width: 10vw;
 }
+.navbar .navbar-nav .nav-item .nav-link {
+    font-weight: 400 !important;
+    color      : #fff !important;
+}
 
+.navbar .nav-link i {
+    color: @amarelo_claro;
+    right: 5px !important;
+}
+
+.navbar-transparent .nav-link i {
+    color: @amarelo_escuro;
+    right: 5px !important;
+}
 .navbar.navbar-transparent {
     padding-top: 0 !important;
 }
@@ -47,15 +81,20 @@ h4,
     padding: 0 !important;
 }
 
+.navbar .navbar-nav .nav-item .nav-link {
+    font-size     : .95rem !important;
+    line-height   : 1.2 !important;
+    padding       : 0 0 0 4rem !important;
+    text-transform: uppercase;
+}
 .bannerVideo {
-    z-index           : 0;
-    outline           : none !important;
-    width             : 100%;
-    max-width         : 100%;
-    display           : flex !important;
-    justify-content   : center;
-    background        : radial-gradient(circle, #A5886A 0, #302327 82%);
-    // background     : @gradient_marrom;
+    z-index        : 0;
+    outline        : none !important;
+    width          : 100%;
+    max-width      : 100%;
+    display        : flex !important;
+    justify-content: center;
+    background     : radial-gradient(circle, #A5886A 0, #00000082 78%);
 }
 
 .navbar {
@@ -77,9 +116,120 @@ h4,
     padding   : 0 5%;
 }
 
+.boxLogin {
+    position: absolute;
+    top     : 15vh;
+    right   : 5vw;
+}
+
+.separator {
+    width          : 100%;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    color          : @cinza;
+    flex-direction : column;
+}
+
+.separator .line {
+    display         : block;
+    width           : 100%;
+    height          : 1px;
+    border          : 0;
+    background-color: @corSeparador;
+}
+
+.separator>a {
+    display        : flex;
+    flex-direction : revert;
+    gap            : 1rem;
+    align-items    : center;
+    justify-content: center;
+    cursor         : pointer;
+}
+
+.separator>a:hover,
+a.btnRight:hover {
+    color     : @marrom_claro;
+    transform : scale(1.02);
+    transition: all ease 0.5s;
+}
+
+.note {
+    font-size      : 0.75rem;
+    color          : @cinza;
+    text-decoration: none;
+}
+
+.title_container h3 {
+    max-width  : 20ch;
+    text-align : center;
+    line-height: 1;
+}
 /* -------    inputs    -------- */
-.icon {
-    fill: transparent !important;
+.form_container {
+    width          : 23vw;
+    height         : fit-content;
+    display        : flex;
+    flex-direction : column;
+    align-items    : center;
+    justify-content: center;
+    gap            : 22px;
+    padding        : 3vh 2vw 1vh;
+    background     : @gradient_cinza;
+    box-shadow     : 0px 106px 42px rgba(0, 0, 0, 0.01),
+        0px 59px 36px rgba(0, 0, 0, 0.05), 0px 26px 26px rgba(0, 0, 0, 0.09),
+        0px 7px 15px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    transition   : all ease 1s;
+}
+
+.form_container:hover {
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    scale     : 0.99;
+    transition: all ease 1s;
+}
+
+.input_container {
+    width         : 100%;
+    height        : fit-content;
+    position      : relative;
+    display       : flex;
+    flex-direction: column;
+    gap           : 5px;
+}
+
+.inputGroup i {
+    width          : 20px;
+    position       : absolute;
+    z-index        : 99;
+    left           : 12px;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+}
+
+.input_label {
+    font-size  : 0.75rem;
+    color      : #8B8E98;
+    font-weight: 600;
+}
+
+.input_field {
+    width        : auto;
+    height       : 40px;
+    padding      : 0 0 0 40px;
+    border-radius: 7px;
+    outline      : none;
+    border       : 1px solid #e5e5e5;
+    filter       : drop-shadow(0px 1px 0px #efefef) drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
+    transition   : all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+
+.input_field:focus {
+    border    : 1px solid transparent;
+    box-shadow: 0px 0px 0px 2px #242424;
+    background-color: transparent;
 }
 
 .inputGroup {
@@ -95,47 +245,53 @@ h4,
     /* padding      : 0.8em; */
     outline         : none;
     border          : 2px solid rgb(200, 200, 200);
-    background-color: transparent;
+    background-color: #fff;
     border-radius   : 8px;
     width           : 100%;
 }
 
 .inputGroup label {
-    font-size     : 100%;
-    position      : absolute;
-    left          : 0;
-    padding       : 1rem;
-    margin-left   : 0.5em;
-    pointer-events: none;
-    transition    : all 0.3s ease;
-    color         : rgb(100, 100, 100);
+    font-size : 100%;
+    height : 100%;
+    position : absolute;
+    left : 0;
+    padding : 1rem;
+    margin-left : 0.5em;
+    pointer-events : none;
+    transition : all 0.3s ease;
+    // color         : rgb(100, 100, 100);
 }
 
 .inputGroup :is(input:focus, input:valid)~label {
-    transform       : translateY(-122%) scale(.85);
-    /* margin       : 0em; */
-    margin-left     : 2rem;
-    padding         : 0.1rem 0.5rem;
-    background-color: #f9f9f9;
+    transform  : translateY(-122%) scale(.85);
+    height     : auto;
+    margin-left: 2rem;
+    padding    : 0.1rem 0.5rem;
 }
 
 .inputGroup :is(input:focus, input:valid)~label:after {
-    transform: translateY(184%) scaleY(3.2);
-    margin   : 5px;
+    transform: translateY(264%) scaleY(2.1) translateX(-3px);
+    margin   : 0;
 }
 
+
 .inputGroup :is(input:focus, input:valid) {
-    border-color: rgb(150, 150, 200);
+    border-color: @corSeparador;
 }
 
 .inputGroup label:after {
     position  : absolute;
-    background: #c8c8c8;
+    background: @cinza;
     width     : 0.1px;
     height    : 48%;
     left      : 5px;
     content   : "";
-    top       : 13px;
+    top : 18px;
+    }
+
+    .inputGroup :is(input:focus, input:valid)~label.ajusteLabel:after {
+        transform: translateY(264%) scaleY(2.1) translateX(-10px);
+        margin   : 0;
 }
 
 .linhaVertical {
@@ -146,7 +302,21 @@ h4,
     left      : 2.8rem;
 }
 
+input.inputVerify {
+    padding   : 0 !important;
+    text-align: center;
+}
+
+.inputVerify {
+    width        : 2.5em;
+    height       : 2.5em;
+    margin       : 1em;
+    border-radius: 6px;
+    transition   : .4s ease-in-out;
+}
 /* -------  fim  inputs    -------- */
+
+
 .gradient-border {
     --white      : linear-gradient (white, white);
     --gradient   : linear-gradient(to right, @cinza, @cinza_bg);
@@ -156,30 +326,132 @@ h4,
         var(--gradient) border-box;
 }
 
+button i.fi {
+    display    : flex;
+    align-items: center;
+}
+
+button {
+    width          : 100%;
+    height         : 40px;
+    box-shadow     : inset -2px -2px 10px -3px #00000042;
+    background-size: 280% auto;
+    border-radius  : 12px !important;
+    outline        : none;
+    cursor         : pointer;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    text-transform : uppercase !important;
+    transition     : all ease 0.5s;
+}
 
 .btnEntrar {
-    width           : 100%;
-    height          : 40px;
     border          : 0;
     background-image: @gradient_amarelo;
-    background-image: linear-gradient(to right, #ff6e7f 0%, #bfe9ff 51%, #ff6e7f 100%);
-    border-radius   : 12px;
+    background-size : 280% auto;
     outline         : none;
-    color           : #ffffff;
+    color      : #fff;
+    transition : all ease 0.5s;
+    }
+
+    button:hover,
+    .btnEntrar:hover {
+        background-position: right top;
+        box-shadow         : inset 2px 2px 10px -3px #00000042;
+        transform          : scale(1.02);
+        transition         : all ease 0.5s;
+    }
+
+    .btnRight {
+        width     : 100%;
+        text-align: right;
+    }
+
+    .btnSign {
+        gap          : 10px;
+        background   : @vermelho;
+        border-radius: 8px;
+        color        : #fff;
+        border       : 0;
+    }
+
+    .btnSign div:nth-child(1) {
+        height                   : 100%;
+        display                  : flex;
+        align-items              : center;
+        justify-content          : center;
+        backdrop-filter          : brightness(0.85);
+        border-top-left-radius   : 8px;
+        border-bottom-left-radius: 8px;
+    }
+
+    .btnSign.tiktok {
+        background: #484747 !important;
+    }
+
+    .btnSign.facebook {
+        background: #3A5999 !important;
+    }
+
+    .btnBorder {
+        background   : transparent;
+        border-radius: 8px;
+        color        : @marrom_escuro;
+        border       : 1px solid @marrom_escuro;
+    }
+
+    a.btnRight {
+        color: @marrom_escuro;
+    }
+
+    // -------- switch slider checkbox-----
+    .sliderSwitch {
+        background-color: #ffffff2b;
+        border-radius   : 100px;
+        padding         : 1px;
+        margin          : 10px;
     cursor          : pointer;
+    transition  : box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    align-items : center;
+    position    : relative;
+    display     : inline-block;
+    width       : 51px;
+    height      : 29px;
+    box-shadow  : rgba(0, 0, 0, 0.62) 0px 0px 5px inset,
+    rgba(0, 0, 0, 0.21) 0px 0px 0px 24px inset,
+    #22cc3f 0px 0px 0px 0px inset,
+    rgba(224, 224, 224, 0.45) 0px 1px 0px 0px;
+    }
+
+    .sliderSwitch::after {
+        content: "";
     display         : flex;
-    align-items     : center;
-    justify-content : center;
-    text-transform  : uppercase;
-    transition      : all ease .3s;
+    top             : 2.3px;
+    left            : 2px;
+    width           : 26px;
+    height          : 26px;
+    background-color: #e3e3e3;
+    border-radius   : 200px;
+    position        : absolute;
+    box-shadow      : transparent 0px 0px 0px 2px,
+    rgba(0, 0, 0, 0.3) 0px 6px 6px;
+    transition: left 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    will-change: left,
+    background-color;
+    }
+
+    .switch input[type="checkbox"]:checked+.sliderSwitch {
+        box-shadow: rgba(0, 0, 0, 0.62) 0px 0px 5px inset, #22cc3f 0px 0px 0px 2px inset, #22cc3f 0px 0px 0px 24px inset,
+            rgba(224, 224, 224, 0.45) 0px 1px 0px 0px;
 }
 
-button:hover {
-    background-position: right center;
-    transition         : all ease .3s;
+.switch input[type="checkbox"]:checked+.sliderSwitch::after {
+    left: 24px;
 }
 
-.btnRight {
-    width: 100%;
-    text-align: right;
+.switch input[type="checkbox"] {
+    display: none;
 }
+// -------- fim switch slider checkbox-----

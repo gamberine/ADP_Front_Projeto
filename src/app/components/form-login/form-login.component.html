@@ -1,0 +1,158 @@
+<!-- modal login -->
+<form class="form_container" *ngIf="exibirModalLogin">
+    <div class="title_container">
+        <h3 class="m-3">Acessar</h3>
+    </div>
+    <div class="inputGroup">
+        <input type="text" required="" autocomplete="off">
+        <i class="fi fi-rr-envelope"></i>
+        <label for="mail">E-mail</label>
+    </div>
+    <div class="inputGroup">
+        <input type="password" required="" autocomplete="off">
+        <i class="fi fi-rr-key"></i>
+        <label for="password">Senha</label>
+    </div>
+    <button type="submit" class="btnEntrar">
+        <span>entrar</span>
+    </button>
+    <a class="btnRight" (click)="toggleRecuperarSenha()">
+        ESQUECEU SUA SENHA?
+    </a>
+    <button type="submit" class="btnBorder" (click)="toggleCadastroUsuario()">
+        <span>CADASTRAR NOVA CONTA</span>
+    </button>
+
+    <button type="submit" class="btnSign">
+        <div class="col-md-2"><i class="fi fi-rr-info"></i></div>
+        <div class="col-md-10 text-left"><span>CONTIUAR COM GOOGLE</span></div>
+    </button>
+    <button type="submit" class="btnSign tiktok">
+        <div class="col-md-2"><i class="fi fi-rr-info"></i></div>
+        <div class="col-md-10 text-left"><span>CONTIUAR COM TIKTOK</span></div>
+    </button>
+    <button type="submit" class="btnSign facebook">
+        <div class="col-md-2"><i class="fi fi-rr-info"></i></div>
+        <div class="col-md-10 text-left"><span>CONTIUAR COM FACEBOOK</span></div>
+    </button>
+
+    <div class="separator">
+        <hr class="line">
+        <a (click)="toggleChaveAcesso()">
+            <p class="">ENTRAR COM CHAVE DE ACESSO</p>
+        </a>
+    </div>
+</form>
+
+<!-- modal cadastro usuário -->
+<form class="form_container" *ngIf="!exibirModalCadastro">
+    <div class="title_container">
+        <h3 class="m-3">Cadastro de usuário</h3>
+    </div>
+    <div class="inputGroup">
+        <input type="text" required="" autocomplete="off">
+        <i class="fi fi-rr-user"></i>
+        <label for="nome">Nome</label>
+    </div>
+    <div class="inputGroup">
+        <input type="text" required="" autocomplete="off">
+        <i class="fi fi-rr-envelope"></i>
+        <label for="mail">E-mail</label>
+    </div>
+    <div class="inputGroup">
+        <input type="tel" required="" autocomplete="off">
+        <i class="fi fi-brands-whatsapp"></i>
+        <label for="tel">Telefone</label>
+    </div>
+    <div class="inputGroup">
+        <input type="password" required="" autocomplete="off">
+        <i class="fi fi-rr-key"></i>
+        <label for="password">Senha</label>
+    </div>
+    <div class="inputGroup">
+        <input type="password" required="" autocomplete="off">
+        <i class="fi fi-rr-key"></i>
+        <label class="ajusteLabel" for="password-confirm">Confirmação de Senha</label>
+    </div>
+    <button type="submit" class="btnEntrar">
+        <span>cadastrar</span>
+    </button>
+
+    <div class="separator">
+        <hr class="line">
+        <a (click)="toggleCadastroUsuario()">
+            <i class="fi fi-rr-arrow-left"></i>
+            <p class="">voltar</p>
+        </a>
+    </div>
+</form>
+
+<!-- modal Recuperar senha -->
+<form class="form_container" *ngIf="!exibirModalLogin">
+    <div class="title_container">
+        <h3 class="m-3">Recuperar senha</h3>
+    </div>
+    <div class="inputGroup">
+        <input type="text" required="" autocomplete="off">
+        <i class="fi fi-rr-envelope"></i>
+        <label class="ajusteLabel" for="mail">E-mail cadastrado</label>
+    </div>
+    <button type="submit" class="btnEntrar">
+        <span>iniciar recuperação</span>
+    </button>
+
+    <div class="separator">
+        <hr class="line">
+        <a (click)="toggleRecuperarSenha()">
+            <i class="fi fi-rr-arrow-left"></i>
+            <p class="">voltar</p>
+        </a>
+    </div>
+</form>
+
+<!-- modal Acessar com chave de acesso -->
+<form class="form_container" *ngIf="!exibirModalChaveAcesso">
+    <div class="title_container">
+        <h3 class="m-3">Acessar com chave de acesso</h3>
+    </div>
+    <div class="inputGroup">
+        <input type="password" required="" autocomplete="off">
+        <i class="fi fi-rr-password"></i>
+        <label class="ajusteLabel" for="chave-acesso">Infome a chave de acesso</label>
+    </div>
+    <button type="submit" class="btnEntrar">
+        <span>entrar</span>
+    </button>
+
+    <div class="separator">
+        <hr class="line">
+        <a (click)="toggleChaveAcesso()">
+            <i class="fi fi-rr-arrow-left"></i>
+            <p class="">voltar</p>
+        </a>
+    </div>
+</form>
+
+<!-- modal confirmação de conta -->
+<!-- <form class="form_container">
+    <div class="title_container">
+        <h3 class="m-3">Bem vindo!</h3>
+        <p class="">O seu cadastro foi realizado com sucesso! Para continuar informe o código enviado por SMS.</p>
+    </div>
+    <div class="inputGroup">
+        <input class="inputVerify" type="tel" maxlength="1" required>
+        <input class="inputVerify" type="tel" maxlength="1" required>
+        <input class="inputVerify" type="tel" maxlength="1" required>
+        <input class="inputVerify" type="tel" maxlength="1" required>
+    </div>
+    <button type="submit" class="btnEntrar">
+        <span>entrar</span>
+    </button>
+
+    <div class="separator">
+        <hr class="line">
+        <a (click)="toggleChaveAcesso()">
+            <p class="">Enviar o código novamente</p>
+        </a>
+    </div>
+</form> -->
