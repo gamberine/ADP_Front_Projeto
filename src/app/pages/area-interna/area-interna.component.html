@@ -1,59 +1,62 @@
-<div class="wrapper">
-    <div class="page-header page-header-xs" data-parallax="true"
-        style="background-image: url('./assets/img/fabio-mangione.jpg');">
-        <div class="filter"></div>
+<div class="wrapper internas">
+    <div class="page-header page-header-internas">
     </div>
-    <div class="section profile-content">
-        <div class="container">
-                
-                
-                
-                    <!-- <button type="button" class="btn btn-outline-danger btn-round" placement="top" ngbTooltip="Tooltip on top">
+    <div class="container">
+
+        <!-- <button type="button" class="btn btn-outline-danger btn-round" placement="top" ngbTooltip="Tooltip on top">
                         on top
                     </button> -->
-                
-            <div class="nav-tabs-navigation">
-                <div class="nav-tabs-wrapper">
-                    <ngb-tabset [justify]="'center'">
-                        <ngb-tab title="BENEFICIÁRIOS">
-                            <ng-template ngbTabContent>
-                                <div class="row following" id="follows">
-                                    <div class="col-md-6 ml-auto mr-auto">
-                                        <ul class="list-unstyled follows">
-                                            <li>
-                                                <div class="row">
-                                                    <div class="col-md-2 col-sm-2 ml-auto mr-auto">
-                                                        <img src="./assets/img/faces/clem-onojeghuo-2.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
-                                                    </div>
-                                                    <div class="col-md-7 col-sm-4 ml-auto">
-                                                        <h6>Flume<br /><small>Musical Producer</small></h6>
-                                                    </div>
-                                                    <div class="col-md-3 col-sm-2 ml-auto mr-auto">
-                                                        <div class="form-check">
-                                                            <label class="form-check-label">
-                                                                <input class="form-check-input" type="checkbox" value="" checked="">
-                                                                <span class="form-check-sign"></span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <hr />
-                                   
-                                        </ul>
-                                    </div>
-                                </div>
-                            </ng-template>
-                        </ngb-tab>
-                        <ngb-tab title="ARQUIVOS">
-                            <ng-template ngbTabContent>
-                                <h3 class="text-muted">TEXTO</h3>
-                                <br>
-                            </ng-template>
-                        </ngb-tab>
-                    </ngb-tabset>
-                </div>
+        <div class="row rowConteudo">
+            <div class="nav-tabs-navigation mt-5">
+                <img class="wizardTeste" [src]="wizardTeste" />
+                    <h3 class="titleWizard pt-5">Começe escolhendo seu(s) beneficiário(s)</h3>
             </div>
+            <div class="boxBranco col-sm-7">
+                <form class="formWizard">
+                    
+                    <div class="inputGroup col-sm-12">
+                        <input type="text" required="" autocomplete="off">
+                        <label for="nome">Nome Completo</label>
+                    </div>
+                    <div class="inputGroup col-sm-6">
+                        <input type="text" required="" autocomplete="off">
+                        <label for="mail">E-mail</label>
+                    </div>
+                    <div class="inputGroup col-sm-6">
+                        <input type="tel" required="" autocomplete="off">
+                        <label for="tel">Telefone</label>
+                    </div>
+                    <div class="col-sm-12">
+                        <label for="tel">gostaria de notificar o(s) beneficiário(s)?</label>
+                        <label class="switch">
+                            <label for="tel">SIM</label>
+                            <input type="checkbox">
+                            <span class="sliderSwitch"></span>
+                            <label for="tel">NÃO</label>
+                        </label>
+                    </div>
+                
+                </form>
+            </div>
+
+
+            <div class="boxBotoes col-sm-7">
+                <button type="submit" class="btnVoltar">
+                    <i class="fi fi-rr-arrow-left"></i>
+                    <span>voltar</span>
+                </button>
+                <button type="submit" class="btnAdd">
+                    <span>adicionar beneficiário</span>
+                    <i class="fi fi-rr-plus-small"></i>
+                </button>
+                <button type="submit" class="btnPrincipal">
+                    <span>avançar</span>
+                    <i class="fi fi-rr-arrow-right"></i>
+                </button>
+            </div>
+
         </div>
+
+
     </div>
 </div>

@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 
 export class AreaInternaComponent implements OnInit {
 
+    public wizardTeste = 'assets/img/wizard_teste.png';
+
     constructor() { }
 
     ngOnInit() {}

@@ -4,7 +4,7 @@
 @cinza               : #828282 !important;
 @cinza_bg            : #D4D8D6 !important;
 @cor_icones          : #C39984 !important;
-@corSeparador : #8282822e !important;
+@corSeparador        : #8282822e !important;
 @azul                : #88BCC2 !important;
 @azul_escuro         : #6D9994 !important;
 @verde               : #69B88A !important;
@@ -13,9 +13,10 @@
 @marrom_claro        : #B58F8C !important;
 @laranja             : #E3AC6B !important;
 @vermelho            : #E39898 !important;
+@vermelho_escuro     : #ad6969 !important;
 @gradient_amarelo    : linear-gradient(90deg, rgba(204, 157, 102, 1) 0%, rgba(231, 176, 110, 1) 35%) !important;
 @gradient_marrom     : radial-gradient(circle, #3d2935 0%, #E8B48D 83%) !important;
-@gradient_marrom_top : linear-gradient(90deg,#3d2935 0%,#8e6a5e 83%)!important;
+@gradient_marrom_top : linear-gradient(90deg, #3d2935 0%, #8e6a5e 83%) !important;
 @gradient_cinza      : linear-gradient(90deg, #D4D8D6 0%, #F1F1F1 83%) !important;
 @gradient_cinza_top  : linear-gradient(0deg, #D4D8D6 0%, #F1F1F1 83%) !important;
 
@@ -37,7 +38,7 @@ a {
 
 app-form-login {
     position: fixed;
-    right: 10%;
+    right   : 10%;
 }
 
 .container,
@@ -56,19 +57,21 @@ button:focus {
     outline   : none !important;
     box-shadow: 1px 1px 1px 1px #3c3b3b52;
 }
+
 .navbar-transparent .logoLanding {
-    width: 12vw;
+    width  : 12vw;
     padding: 1rem 0;
 }
 
 .logoLanding {
-    width: 7vw;
+    width  : 7vw;
     padding: 1rem 0;
 }
 
 .navbar .navbar-nav .nav-item .nav-link {
     font-weight: 400 !important;
     color      : #fff !important;
+    opacity: 1 !important;
 }
 
 .navbar .nav-link i {
@@ -80,6 +83,7 @@ button:focus {
     color: @amarelo_escuro;
     right: 5px !important;
 }
+
 .navbar.navbar-transparent {
     padding-top: 0 !important;
 }
@@ -95,6 +99,7 @@ button:focus {
     padding       : 0 0 0 4rem !important;
     text-transform: uppercase;
 }
+
 .bannerVideo {
     z-index        : 0;
     outline        : none !important;
@@ -163,6 +168,64 @@ a.btnRight:hover {
     transition: all ease 0.5s;
 }
 
+.page-header {
+    background-color   : #5c3c3c;
+    background-position: top center;
+    background-size    : cover;
+    min-height         : 100vh;
+    max-height         : 999px;
+    position           : relative;
+    width              : 100%;
+    z-index            : 1;
+    display            : flex;
+    align-items        : center;
+    justify-content    : center;
+    -ms-flex-pack      : center;
+    overflow           : hidden;
+}
+
+.page-header .filter::after {
+    background-color: rgba(0, 0, 0, 0.5);
+    content         : "";
+    display         : block;
+    height          : 100%;
+    left            : 0;
+    top             : 0;
+    position        : absolute;
+    width           : 100%;
+    z-index         : 1;
+}
+
+.page-header.page-header-small {
+    min-height: 65vh !important;
+    max-height: 700px;
+}
+
+.page-header.page-header-xs {
+    min-height: 40vh !important;
+}
+
+.page-header.section-dark .content-center,
+.page-header.section-dark .category-absolute {
+    z-index: 1;
+}
+
+.page-header .motto {
+    text-align: left;
+    z-index   : 3;
+    color     : #fff;
+    position  : relative;
+}
+
+.page-header .content-center {
+    margin-top: 85px;
+}
+
+.page-header .card-register .title {
+    margin-bottom: 10px;
+}
+
+
 .note {
     font-size      : 0.75rem;
     color          : @cinza;
@@ -174,6 +237,8 @@ a.btnRight:hover {
     text-align : center;
     line-height: 1;
 }
+
+
 /* -------    inputs    -------- */
 .form_container {
     width          : 23vw;
@@ -235,8 +300,8 @@ a.btnRight:hover {
 }
 
 .input_field:focus {
-    border    : 1px solid transparent;
-    box-shadow: 0px 0px 0px 2px #242424;
+    border          : 1px solid transparent;
+    box-shadow      : 0px 0px 0px 2px #242424;
     background-color: transparent;
 }
 
@@ -253,20 +318,25 @@ a.btnRight:hover {
     /* padding      : 0.8em; */
     outline         : none;
     border          : 2px solid rgb(200, 200, 200);
-    background-color: #fff;
+    background: #fff;
     border-radius   : 8px;
     width           : 100%;
 }
 
+.internas .inputGroup input {
+    background: linear-gradient(90deg,#d4d8d67d 0%,#F1F1F1 83%)!important;
+    border-color: #F1F1F1;
+}
+
 .inputGroup label {
-    font-size : 100%;
-    height : 100%;
-    position : absolute;
-    left : 0;
-    padding : 1rem;
-    margin-left : 0.5em;
-    pointer-events : none;
-    transition : all 0.3s ease;
+    font-size        : 100%;
+    height           : 100%;
+    position         : absolute;
+    left             : 0;
+    padding          : 1rem;
+    margin-left      : 0.5em;
+    pointer-events   : none;
+    transition       : all 0.3s ease;
     // color         : rgb(100, 100, 100);
 }
 
@@ -287,6 +357,12 @@ a.btnRight:hover {
     border-color: @corSeparador;
 }
 
+.inputGroup :is(input:focus, input:valid)~label.ajusteLabel:after {
+    transform: translateY(264%) scaleY(2.1) translateX(-10px);
+    margin   : 0;
+}
+
+
 .inputGroup label:after {
     position  : absolute;
     background: @cinza;
@@ -294,13 +370,13 @@ a.btnRight:hover {
     height    : 48%;
     left      : 5px;
     content   : "";
-    top : 18px;
-    }
-
-    .inputGroup :is(input:focus, input:valid)~label.ajusteLabel:after {
-        transform: translateY(264%) scaleY(2.1) translateX(-10px);
-        margin   : 0;
+    top       : 18px;
 }
+.internas .inputGroup label:after {
+    display: none;
+
+}
+
 
 .linhaVertical {
     position  : absolute;
@@ -322,6 +398,7 @@ input.inputVerify {
     border-radius: 6px;
     transition   : .4s ease-in-out;
 }
+
 /* -------  fim  inputs    -------- */
 
 
@@ -332,6 +409,59 @@ input.inputVerify {
     border-radius: .5rem;
     background   : var(--white) padding-box,
         var(--gradient) border-box;
+}
+
+.page-header.page-header-internas {
+    min-height: 12vh !important;
+}
+
+.navbar.page-header-internas {
+    min-height: 12vh !important;
+    background: #fff !important;
+}
+
+.page-header-internas .navbar-nav .nav-item .nav-link {
+    color: @amarelo_claro;
+    opacity: 1 !important;
+}
+
+.page-header-internas .nav-link i {
+    color: @verde;
+}
+
+.page-header-internas .navbar-translate {
+    display    : flex;
+    align-items: center;
+    gap        : 4rem;
+}
+
+.msgBemVindo span {
+    color      : @amarelo_claro;
+    font-weight: 600;
+}
+@media screen and (max-width: 1299px){
+    .msgBemVindo {
+        display: none !important;
+    }
+}
+
+// ------ icones -------
+.nav-link i.fi-rr-house-laptop:before {
+    font-weight: 600 !important;
+}
+
+svg#iconFace {
+    width: 10px;
+}
+
+
+
+
+// ------ fim icones -------
+button.navbar-toggler.navbar-burger {
+    flex-direction: column;
+    box-shadow    : none !important;
+    width: auto;
 }
 
 button i.fi {
@@ -354,86 +484,112 @@ button {
     transition     : all ease 0.5s;
 }
 
+button:hover {
+    background-position: right top;
+    box-shadow         : inset 2px 2px 10px -3px #00000042;
+    transform          : scale(1.02);
+    transition         : all ease 0.5s;
+}
+
+.btnPrincipal,
 .btnEntrar {
     border          : 0;
     background-image: @gradient_amarelo;
     background-size : 280% auto;
     outline         : none;
-    color      : #fff;
-    transition : all ease 0.5s;
-    }
+    color           : #fff;
+    transition      : all ease 0.5s;
+}
 
-    button:hover,
-    .btnEntrar:hover {
-        background-position: right top;
-        box-shadow         : inset 2px 2px 10px -3px #00000042;
-        transform          : scale(1.02);
-        transition         : all ease 0.5s;
-    }
+.btnAdd {
+    border: 1px solid @verde_escuro;
+    color           : @verde_escuro;
+    transition      : all ease 0.5s;
+}
+.btnVoltar {
+    border: 1px solid @marrom_escuro;
+    color           : @marrom_escuro;
+    transition      : all ease 0.5s;
+}
 
-    .btnRight {
-        width     : 100%;
-        text-align: right;
-    }
+.btnAdd i,
+.btnPrincipal i {
+    // position: absolute;
+    right: 2vw;
+}
+.btnVoltar i {
+    position: absolute;
+    left: 2vw;
+}
+.btnPrincipal:hover,
+.btnEntrar:hover {
+    background-position: right top;
+    box-shadow         : inset 2px 2px 10px -3px #00000042;
+    transform          : scale(1.02);
+    transition         : all ease 0.5s;
+}
 
-    .btnSign {
-        gap          : 10px;
-        background   : @vermelho;
-        border-radius: 8px;
-        color        : #fff;
-        border       : 0;
-    }
+.btnRight {
+    width     : 100%;
+    text-align: right;
+}
 
-    .btnSign div:nth-child(1) {
-        height                   : 100%;
-        display                  : flex;
-        align-items              : center;
-        justify-content          : center;
-        backdrop-filter          : brightness(0.85);
-        border-top-left-radius   : 8px;
-        border-bottom-left-radius: 8px;
-    }
+.btnSign {
+    gap          : 10px;
+    background   : @vermelho_escuro;
+    border-radius: 8px;
+    color        : #fff;
+    border       : 0;
+}
 
-    .btnSign.tiktok {
-        background: #484747 !important;
-    }
+.btnSign div:nth-child(1) {
+    height                   : 100%;
+    display                  : flex;
+    align-items              : center;
+    justify-content          : center;
+    backdrop-filter          : brightness(0.85);
+    border-top-left-radius   : 8px;
+    border-bottom-left-radius: 8px;
+}
 
-    .btnSign.facebook {
-        background: #3A5999 !important;
-    }
+.btnSign.tiktok {
+    background: #484747 !important;
+}
 
-    .btnBorder {
-        background   : transparent;
-        border-radius: 8px;
-        color        : @marrom_escuro;
-        border       : 1px solid @marrom_escuro;
-    }
+.btnSign.facebook {
+    background: #3A5999 !important;
+}
 
-    a.btnRight {
-        color: @marrom_escuro;
-    }
+.btnBorder {
+    background   : transparent;
+    border-radius: 8px;
+    color        : @marrom_escuro;
+    border       : 1px solid @marrom_escuro;
+}
 
-    // -------- switch slider checkbox-----
-    .sliderSwitch {
-        background-color: #ffffff2b;
-        border-radius   : 100px;
-        padding         : 1px;
-        margin          : 10px;
+a.btnRight {
+    color: @marrom_escuro;
+}
+
+// -------- switch slider checkbox-----
+.sliderSwitch {
+    // background-color: #ffffff2b;
+    background: @amarelo_claro;
+    border-radius   : 100px;
+    padding         : 1px;
+    margin          : 10px;
     cursor          : pointer;
-    transition  : box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
-    align-items : center;
-    position    : relative;
-    display     : inline-block;
-    width       : 51px;
-    height      : 29px;
-    box-shadow  : rgba(0, 0, 0, 0.62) 0px 0px 5px inset,
-    rgba(0, 0, 0, 0.21) 0px 0px 0px 24px inset,
-    #22cc3f 0px 0px 0px 0px inset,
-    rgba(224, 224, 224, 0.45) 0px 1px 0px 0px;
-    }
+    transition      : box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    align-items     : center;
+    position        : relative;
+    display         : inline-block;
+    width           : 51px;
+    height          : 29px;
+    // box-shadow      : rgba(0, 0, 0, 0.62) 0px 0px 5px inset, rgba(0, 0, 0, 0.21) 0px 0px 0px 24px inset, #22cc3f 0px 0px 0px 0px inset, rgba(224, 224, 224, 0.45) 0px 1px 0px 0px;
+}
 
-    .sliderSwitch::after {
-        content: "";
+.sliderSwitch::after {
+    content         : "";
     display         : flex;
     top             : 2.3px;
     left            : 2px;
@@ -442,17 +598,16 @@ button {
     background-color: #e3e3e3;
     border-radius   : 200px;
     position        : absolute;
-    box-shadow      : transparent 0px 0px 0px 2px,
-    rgba(0, 0, 0, 0.3) 0px 6px 6px;
+    box-shadow      : transparent 0px 0px 0px 2px, rgba(0, 0, 0, 0.3) 0px 6px 6px;
     transition: left 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s,
-    background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+        background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
     will-change: left,
-    background-color;
-    }
+        background-color;
+}
 
-    .switch input[type="checkbox"]:checked+.sliderSwitch {
-        box-shadow: rgba(0, 0, 0, 0.62) 0px 0px 5px inset, #22cc3f 0px 0px 0px 2px inset, #22cc3f 0px 0px 0px 24px inset,
-            rgba(224, 224, 224, 0.45) 0px 1px 0px 0px;
+.switch input[type="checkbox"]:checked+.sliderSwitch {
+    background: @cinza_bg;
+    // box-shadow: rgba(0, 0, 0, 0.62) 0px 0px 5px inset, #22cc3f 0px 0px 0px 2px inset, rgba(0, 0, 0, 0.3) 0px 0px 0px 24px inset, rgba(224, 224, 224, 0.45) 0px 1px 0px 0px;
 }
 
 .switch input[type="checkbox"]:checked+.sliderSwitch::after {
@@ -462,4 +617,66 @@ button {
 .switch input[type="checkbox"] {
     display: none;
 }
+
 // -------- fim switch slider checkbox-----
+
+.wrapper.internas {
+    background: @gradient_cinza_top;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer {
+    box-shadow: 0 -7px 11px -8px #00000026 , 0 0 0 0 rgb(149 0 0 / 0%);
+}
+
+.rowConteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.boxBranco {
+    display: flex;
+    background: #fff;
+    box-shadow: 0 6px 10px -4px #00000026;
+    border-radius: 6px;
+    padding: 3rem 2rem 2rem !important;
+}
+
+.boxBotoes {
+    display: flex;
+    gap: 1rem;
+    line-height: 1;
+    width: 100%;
+}
+
+.tab-content>.active {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.formWizard {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 2rem;
+}
+
+.titleWizard {
+    color: @amarelo_claro;
+}
+
+.formWizard label {
+    text-transform: uppercase;
+}
+
+.switch {
+    display: flex;
+    align-items: center;
+}

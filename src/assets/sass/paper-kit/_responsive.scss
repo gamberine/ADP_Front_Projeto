@@ -165,9 +165,6 @@
     .dropdown-menu {
         display: none;
     }
-    .navbar-fixed-top {
-        -webkit-backface-visibility: hidden;
-    }
 
     .social-line .btn{
         margin: $margin-bottom;
@@ -427,9 +424,7 @@
             left: 0;
             @include transform-translate-x(-230px);
         }
-        & .navbar-translate{
-            @include transform-translate-x(-230px);
-        }
+       
 
     }
     .wrapper .navbar-collapse{
@@ -636,9 +631,7 @@
                 left: 0;
                 @include transform-translate-x(-230px);
             }
-            .navbar-translate{
-                @include transform-translate-x(-230px);
-            }
+           
         }
 
         .dropdown.show .dropdown-menu,

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg fixed-top navbar-transparent" color-on-scroll="500">
+<nav class="navbar navbar-expand-lg fixed-top navbar-transparent" color-on-scroll="500" *ngIf="isHome()">
     <div class="container">
         <div class="navbar-translate">
             <a class="navbar-brand" href="/home" *ngIf="isHome()">
@@ -37,8 +37,33 @@
                             interna</a>
                     </li>
                     
-                    
-                    <!-- ------------- MENU TELAS INTERNAS -------------- -->
+            </ul>
+        </div>
+    </div>
+</nav>
+<nav class="navbar navbar-expand-lg fixed-top page-header-internas" *ngIf="!isHome()">
+    <div class="container">
+        <div class="navbar-translate">
+            <a class="navbar-brand" href="/home" *ngIf="isHome()">
+                <img class="logoLanding" [src]="logoLanding" />
+            </a>
+            <a class="navbar-brand" href="/home" *ngIf="!isHome()">
+                <img class="logoInterna" [src]="logoInterna" />
+            </a>
+            <div>
+                <p class="msgBemVindo">Olá, <span>Samer!</span> Seja bem vindo à plataforma Antes de Partir!</p>
+            </div>
+            <button class="navbar-toggler navbar-burger" type="button" data-toggle="collapse" data-target="#navbarToggler"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" (click)="sidebarToggle()">
+                <span class="navbar-toggler-bar"></span>
+                <span class="navbar-toggler-bar"></span>
+                <span class="navbar-toggler-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav ml-auto">
+
+                <!-- ------------- MENU TELAS INTERNAS -------------- -->
                     
                     <li class="nav-item" *ngIf="!isHome()">
                         <a href="/home" class="nav-link"><i class="fi fi-rr-layer-plus"></i>GERENCIAR</a>
