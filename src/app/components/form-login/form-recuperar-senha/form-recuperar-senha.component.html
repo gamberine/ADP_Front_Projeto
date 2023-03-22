@@ -1,0 +1,22 @@
+<!-- modal Recuperar senha -->
+<form class="form_container">
+    <div class="title_container">
+        <h3 class="m-3">Recuperar senha</h3>
+    </div>
+    <div class="inputGroup">
+        <input type="text" required="" autocomplete="off">
+        <i class="fi fi-rr-envelope"></i>
+        <label class="ajusteLabel" for="mail">E-mail cadastrado</label>
+    </div>
+    <button type="submit" class="btnEntrar">
+        <span>iniciar recuperação</span>
+    </button>
+
+    <div class="separator">
+        <hr class="line">
+        <a (click)="toggleRecuperarSenha()">
+            <i class="fi fi-rr-arrow-left"></i>
+            <p class="">voltar</p>
+        </a>
+    </div>
+</form>

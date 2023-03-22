@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormCadastroComponent implements OnInit {
 
+
+  exibirModalCadastro: any = true;
+  toggleCadastroUsuario() {
+    const newLocal = this;
+    newLocal.exibirModalCadastro = !this.exibirModalCadastro;
+  }
+
+
   constructor() { }
 
   ngOnInit(): void {

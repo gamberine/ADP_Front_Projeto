@@ -16,6 +16,9 @@ import { NgbdModalComponent } from './modal/modal.component';
 import { NgbdModalContent } from './modal/modal.component';
 import { FormLoginComponent } from './form-login/form-login.component';
 import { FormCadastroComponent } from './form-login/form-cadastro/form-cadastro.component';
+import { FormRecuperarSenhaComponent } from './form-login/form-recuperar-senha/form-recuperar-senha.component';
+import { FormChaveAcessoComponent } from './form-login/form-chave-acesso/form-chave-acesso.component';
+import { FormConfirmacaoContaComponent } from './form-login/form-confirmacao-conta/form-confirmacao-conta.component';
 
 @NgModule({
     imports: [
@@ -36,7 +39,10 @@ import { FormCadastroComponent } from './form-login/form-cadastro/form-cadastro.
         NgbdModalComponent,
         NgbdModalContent,
         FormLoginComponent,
-        FormCadastroComponent
+        FormCadastroComponent,
+        FormRecuperarSenhaComponent,
+        FormChaveAcessoComponent,
+        FormConfirmacaoContaComponent
     ],
     entryComponents: [NgbdModalContent],
     exports: [homeLandingComponent]
