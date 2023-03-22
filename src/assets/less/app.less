@@ -35,11 +35,15 @@ h4,
 a {
     cursor: pointer !important;
 }
-
-app-form-login {
-    position: fixed;
-    right   : 10%;
+h3, .h3 {
+    font-size: 1.3rem;
+    line-height: 1.2;
 }
+
+// app-form-login {
+//     position: fixed;
+//     right   : 10%;
+// }
 
 .container,
 .container-lg,
@@ -48,6 +52,7 @@ app-form-login {
 .container-xl {
     max-width: 80% !important;
 }
+
 
 :focus-visible {
     outline: none !important;
@@ -68,10 +73,19 @@ button:focus {
     padding: 1rem 0;
 }
 
+.logoInterna {
+    width  : 12vw;
+    padding: 1rem 0;
+}
+
 .navbar .navbar-nav .nav-item .nav-link {
-    font-weight: 400 !important;
-    color      : #fff !important;
-    opacity: 1 !important;
+    font-size     : .95rem !important;
+    line-height   : 1.1 !important;
+    padding       : 0 0 0 3vw !important;
+    text-transform: uppercase;
+    font-weight   : 400 !important;
+    color         : #fff !important;
+    opacity       : 1 !important;
 }
 
 .navbar .nav-link i {
@@ -91,13 +105,6 @@ button:focus {
 .navbar .navbar-brand {
     margin : 0 !important;
     padding: 0 !important;
-}
-
-.navbar .navbar-nav .nav-item .nav-link {
-    font-size     : .95rem !important;
-    line-height   : 1.2 !important;
-    padding       : 0 0 0 4rem !important;
-    text-transform: uppercase;
 }
 
 .bannerVideo {
@@ -318,15 +325,11 @@ a.btnRight:hover {
     /* padding      : 0.8em; */
     outline         : none;
     border          : 2px solid rgb(200, 200, 200);
-    background: #fff;
+    background      : #fff;
     border-radius   : 8px;
     width           : 100%;
 }
 
-.internas .inputGroup input {
-    background: linear-gradient(90deg,#d4d8d67d 0%,#F1F1F1 83%)!important;
-    border-color: #F1F1F1;
-}
 
 .inputGroup label {
     font-size        : 100%;
@@ -344,6 +347,23 @@ a.btnRight:hover {
     transform  : translateY(-122%) scale(.85);
     height     : auto;
     margin-left: 2rem;
+    padding    : 0.1rem 0.5rem;
+}
+
+.internas .inputGroup input {
+    background  : linear-gradient(90deg, #d4d8d67d 0%, #F1F1F1 83%) !important;
+    border-color: #F1F1F1;
+    padding     : 0 1rem;
+}
+
+.internas .inputGroup label {
+    margin: 0 1rem;
+}
+
+.internas .inputGroup :is(input:focus, input:valid)~label {
+    transform  : translateY(-146%) scale(.9);
+    height     : auto;
+    margin-left: 1rem;
     padding    : 0.1rem 0.5rem;
 }
 
@@ -372,9 +392,14 @@ a.btnRight:hover {
     content   : "";
     top       : 18px;
 }
+
 .internas .inputGroup label:after {
     display: none;
 
+}
+
+.internas .container {
+    padding: 2rem 0;
 }
 
 
@@ -421,7 +446,7 @@ input.inputVerify {
 }
 
 .page-header-internas .navbar-nav .nav-item .nav-link {
-    color: @amarelo_claro;
+    color  : @amarelo_claro;
     opacity: 1 !important;
 }
 
@@ -439,11 +464,7 @@ input.inputVerify {
     color      : @amarelo_claro;
     font-weight: 600;
 }
-@media screen and (max-width: 1299px){
-    .msgBemVindo {
-        display: none !important;
-    }
-}
+
 
 // ------ icones -------
 .nav-link i.fi-rr-house-laptop:before {
@@ -454,6 +475,9 @@ svg#iconFace {
     width: 10px;
 }
 
+.fi-rr-plus-small:before {
+    font-size: 1.2rem;
+}
 
 
 
@@ -461,7 +485,7 @@ svg#iconFace {
 button.navbar-toggler.navbar-burger {
     flex-direction: column;
     box-shadow    : none !important;
-    width: auto;
+    width         : auto;
 }
 
 button i.fi {
@@ -470,6 +494,8 @@ button i.fi {
 }
 
 button {
+    background: transparent;
+    position       : relative;
     width          : 100%;
     height         : 40px;
     box-shadow     : inset -2px -2px 10px -3px #00000042;
@@ -481,6 +507,7 @@ button {
     align-items    : center;
     justify-content: center;
     text-transform : uppercase !important;
+    font-weight: 600 !important;
     transition     : all ease 0.5s;
 }
 
@@ -502,25 +529,35 @@ button:hover {
 }
 
 .btnAdd {
-    border: 1px solid @verde_escuro;
-    color           : @verde_escuro;
-    transition      : all ease 0.5s;
+    border    : 2px solid @verde_escuro;
+    color     : @verde_escuro;
+    transition: all ease 0.5s;
 }
+
 .btnVoltar {
-    border: 1px solid @marrom_escuro;
-    color           : @marrom_escuro;
-    transition      : all ease 0.5s;
+    border    : 2px solid @marrom_escuro;
+    color     : @marrom_escuro;
+    transition: all ease 0.5s;
+}
+.btnVoltar.reduzido {
+    width: 40%;
+    border    : none !important;
+    color     : @marrom_escuro;
+    box-shadow: none;
+    transition: all ease 0.5s;
 }
 
 .btnAdd i,
 .btnPrincipal i {
-    // position: absolute;
-    right: 2vw;
+    position: absolute;
+    right   : 1vw;
 }
+
 .btnVoltar i {
     position: absolute;
-    left: 2vw;
+    left    : 1vw;
 }
+
 .btnPrincipal:hover,
 .btnEntrar:hover {
     background-position: right top;
@@ -574,17 +611,17 @@ a.btnRight {
 // -------- switch slider checkbox-----
 .sliderSwitch {
     // background-color: #ffffff2b;
-    background: @amarelo_claro;
-    border-radius   : 100px;
-    padding         : 1px;
-    margin          : 10px;
-    cursor          : pointer;
-    transition      : box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
-    align-items     : center;
-    position        : relative;
-    display         : inline-block;
-    width           : 51px;
-    height          : 29px;
+    background         : @amarelo_claro;
+    border-radius      : 100px;
+    padding            : 1px;
+    margin             : 10px;
+    cursor             : pointer;
+    transition         : box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    align-items        : center;
+    position           : relative;
+    display            : inline-block;
+    width              : 51px;
+    height             : 29px;
     // box-shadow      : rgba(0, 0, 0, 0.62) 0px 0px 5px inset, rgba(0, 0, 0, 0.21) 0px 0px 0px 24px inset, #22cc3f 0px 0px 0px 0px inset, rgba(224, 224, 224, 0.45) 0px 1px 0px 0px;
 }
 
@@ -599,14 +636,13 @@ a.btnRight {
     border-radius   : 200px;
     position        : absolute;
     box-shadow      : transparent 0px 0px 0px 2px, rgba(0, 0, 0, 0.3) 0px 6px 6px;
-    transition: left 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    transition      : left 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s,
         background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
-    will-change: left,
-        background-color;
+    will-change: left, background-color;
 }
 
 .switch input[type="checkbox"]:checked+.sliderSwitch {
-    background: @cinza_bg;
+    background   : @cinza_bg;
     // box-shadow: rgba(0, 0, 0, 0.62) 0px 0px 5px inset, #22cc3f 0px 0px 0px 2px inset, rgba(0, 0, 0, 0.3) 0px 0px 0px 24px inset, rgba(224, 224, 224, 0.45) 0px 1px 0px 0px;
 }
 
@@ -621,55 +657,70 @@ a.btnRight {
 // -------- fim switch slider checkbox-----
 
 .wrapper.internas {
-    background: @gradient_cinza_top;
-    min-height: 90vh;
-    display: flex;
+    background    : @gradient_cinza_top;
+    min-height    : 90vh;
+    display       : flex;
     flex-direction: column;
-    align-items: center;
+    align-items   : center;
 }
+
 .footer {
-    box-shadow: 0 -7px 11px -8px #00000026 , 0 0 0 0 rgb(149 0 0 / 0%);
+    box-shadow: 0 -7px 11px -8px #00000026, 0 0 0 0 rgb(149 0 0 / 0%);
 }
 
 .rowConteudo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display        : flex;
+    flex-direction : column;
+    align-items    : center;
     justify-content: center;
-    gap: 2rem;
+    gap            : 2rem;
 }
 
 .boxBranco {
-    display: flex;
-    background: #fff;
-    box-shadow: 0 6px 10px -4px #00000026;
-    border-radius: 6px;
-    padding: 3rem 2rem 2rem !important;
+    display      : flex;
+    background   : #fff;
+    box-shadow   : 0 6px 10px -4px #00000026;
+    border-radius: 8px;
+    padding      : 3rem 2rem 2rem !important;
 }
 
 .boxBotoes {
-    display: flex;
-    gap: 1rem;
-    line-height: 1;
-    width: 100%;
+    display       : flex;
+    gap           : 1rem;
+    line-height   : 1;
+    width         : 100%;
+    padding       : 0 !important;
+    padding-bottom: 2rem !important;
 }
 
 .tab-content>.active {
-    display: flex !important;
-    flex-direction: row;
-    align-items: center;
+    display        : flex !important;
+    flex-direction : row;
+    align-items    : center;
     justify-content: center;
 }
 
 .formWizard {
-    width: 100%;
-    display: flex;
+    width    : 100%;
+    display  : flex;
     flex-wrap: wrap;
-    row-gap: 2rem;
+    row-gap  : 2rem;
+}
+
+.navigationWizard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .titleWizard {
-    color: @amarelo_claro;
+    font-size: 1.3rem;
+    color        : @amarelo_claro;
+    margin-bottom: -1rem!important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .formWizard label {
@@ -677,6 +728,65 @@ a.btnRight {
 }
 
 .switch {
-    display: flex;
+    display    : flex;
     align-items: center;
+}
+
+img.wizardTeste {
+    max-width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ----- responsividade -------
+
+@media screen and (max-width: 1369px) {
+
+    // app-root {
+    //     zoom: .75;
+    // }
+
+
+    .navbar .navbar-nav .nav-item .nav-link {
+        font-size: .8rem !important;
+    }
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 90% !important;
+    }
+    .form_container {
+        width: 25vw;
+        gap: 1.2rem;
+        padding: 1vh 2vw 1vh;
+    }
+
+
+
+
+}
+
+@media screen and (max-width: 1299px) {
+    .msgBemVindo {
+        display: none !important;
+    }
 }
