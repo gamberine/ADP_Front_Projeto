@@ -44,10 +44,10 @@
 <nav class="navbar navbar-expand-lg fixed-top page-header-internas" *ngIf="!isHome()">
     <div class="container">
         <div class="navbar-translate">
-            <a class="navbar-brand" href="/home" *ngIf="isHome()">
+            <a class="navbar-brand" [routerLink]="['/area-interna']" *ngIf="isHome()">
                 <img class="logoLanding" [src]="logoLanding" />
             </a>
-            <a class="navbar-brand" href="/home" *ngIf="!isHome()">
+            <a class="navbar-brand" [routerLink]="['/area-interna']" *ngIf="!isHome()">
                 <img class="logoInterna" [src]="logoInterna" />
             </a>
             <div>
@@ -66,13 +66,13 @@
                 <!-- ------------- MENU TELAS INTERNAS -------------- -->
                     
                     <li class="nav-item" *ngIf="!isHome()">
-                        <a href="/home" class="nav-link"><i class="fi fi-rr-layer-plus"></i>GERENCIAR</a>
+                        <a [routerLink]="['/gerenciar']" class="nav-link"><i class="fi fi-rr-layer-plus"></i>GERENCIAR</a>
                     </li>
                     <li class="nav-item" *ngIf="!isHome()">
-                        <a href="/home" class="nav-link"><i class="fi fi-rr-comments-question"></i>AJUDA</a>
+                        <a [routerLink]="['/ajuda']" class="nav-link"><i class="fi fi-rr-comments-question"></i>AJUDA</a>
                     </li>
                     <li class="nav-item" *ngIf="!isHome()">
-                        <a href="#" class="nav-link"><i class="fi fi-rr-headset"></i>CONTATO</a>
+                        <a [routerLink]="['/contato']" class="nav-link"><i class="fi fi-rr-headset"></i>CONTATO</a>
                 </li>
                 <li class="nav-item" *ngIf="!isHome()">
                     <a [routerLink]="['/home']" class="nav-link"><i class="fi fi-rr-sign-out-alt"></i>SAIR</a>

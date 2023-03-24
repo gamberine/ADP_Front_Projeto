@@ -5,6 +5,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AreaInternaComponent } from './area-interna/area-interna.component';
 import { SignupComponent } from './signup/signup.component';
+import { GerenciarComponent } from './gerenciar/gerenciar.component';
+import { AjudaComponent } from './ajuda/ajuda.component';
+import { ContatoComponent } from './contato/contato.component';
 
 @NgModule({
     imports: [
@@ -14,7 +17,10 @@ import { SignupComponent } from './signup/signup.component';
     ],
     declarations: [
         SignupComponent,
-        AreaInternaComponent
+        AreaInternaComponent,
+        GerenciarComponent,
+        AjudaComponent,
+        ContatoComponent
     ]
 })
 export class ExamplesModule { }
