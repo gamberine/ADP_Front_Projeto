@@ -4,15 +4,42 @@
     <div class="container">
 
         <div class="row rowConteudo">
-            <div class="col-sm-7 mt-4">
-                <h3 class="titleWizard pt-4">Gerenciar</h3>
+            <div class="col-sm-9 mt-4">
+                <button type="submit" class="btnAdd">
+                    <span>adicionar novo arquivo</span>
+                    <i class="fi fi-rr-plus-small"></i>
+                </button>
             </div>
-            <div class="boxBranco col-sm-7">
-                <form class="formWizard">
+            <div class="boxBranco col-sm-9">
+                <div class="container">  
+        
                     
-                  texto
-                
-                </form>
+                    <ngb-tabset [destroyOnHide]="false">  
+                        
+                      <ngb-tab title="Meus arquivos">  
+                        <ng-template ngbTabContent>  
+                          <p>Aqui você consegue visualizar seus arquivos, consultar detalhes e também administrá-los da melhor forma.</p>  
+
+                          aqui o form
+
+                          
+                        </ng-template>  
+                      </ngb-tab>  
+                         
+                      <ngb-tab>  
+                        <ng-template ngbTabTitle>Minha conta</ng-template>  
+                        <ng-template ngbTabContent>  
+                            <p>alterar dados cadastrais da conta.</p>  
+                            <button type="submit" class="btnAdd">
+                                <span>Desativar conta</span>
+                                <i class="fi fi-rr-plus-small"></i>
+                            </button>
+                        </ng-template>  
+                      </ngb-tab>  
+                         
+                         
+                    </ngb-tabset>  
+                    </div>  
             </div>
 
 
@@ -26,13 +53,13 @@
                     <span>voltar</span>
                 </button>
                 <button type="submit" class="btnAdd">
-                    <span>adicionar beneficiário</span>
+                    <span>adicionar novo arquivo</span>
                     <i class="fi fi-rr-plus-small"></i>
                 </button> -->
-                <button type="submit" class="btnPrincipal">
+                <!-- <button type="submit" class="btnPrincipal">
                     <span>avançar</span>
                     <i class="fi fi-rr-arrow-right"></i>
-                </button>
+                </button> -->
             </div>
 
         </div>
