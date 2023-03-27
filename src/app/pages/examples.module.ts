@@ -8,6 +8,8 @@ import { SignupComponent } from './signup/signup.component';
 import { GerenciarComponent } from './gerenciar/gerenciar.component';
 import { AjudaComponent } from './ajuda/ajuda.component';
 import { ContatoComponent } from './contato/contato.component';
+import { MeusArquivosComponent } from './gerenciar/meus-arquivos/meus-arquivos.component';
+import { MinhaContaComponent } from './gerenciar/minha-conta/minha-conta.component';
 
 @NgModule({
     imports: [
@@ -20,7 +22,9 @@ import { ContatoComponent } from './contato/contato.component';
         AreaInternaComponent,
         GerenciarComponent,
         AjudaComponent,
-        ContatoComponent
+        ContatoComponent,
+        MeusArquivosComponent,
+        MinhaContaComponent
     ]
 })
 export class ExamplesModule { }
